@@ -1,4 +1,4 @@
-**Esercizio: Trova il numero maggiore**
+**Esercizio: Trova il numero maggiore**<br>
 Scrivi un programma JavaScript che chieda all'utente di inserire due numeri utilizzando il metodo `prompt`. Il programma quindi determinerà quale dei due numeri inseriti è il maggiore e stamperà il risultato sulla console.
 
 **Soluzione:**
