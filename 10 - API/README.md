@@ -16,7 +16,7 @@ Questo progetto è un esercizio su chiamate API utilizzando JavaScript Vanilla. 
 
 1.  Apri il file `index.html` nel tuo browser per visualizzare l'applicazione.
 2.  I primi tre post verranno caricati all'avvio.
-3.  Clicca sul pulsante "Carica tutti i post" per caricare gli altri post.
+3.  Clicca sul pulsante "Carica altri post" per caricare gli altri post.
 4.  Clicca su un post per visualizzare i dettagli sulla pagina dedicata "dettagli.html".
 
 ## Risorse Utilizzate
