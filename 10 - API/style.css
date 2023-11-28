@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#postContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  width: 300px;
+  cursor: pointer; /* Aggiunto per indicare che le card sono cliccabili */
+}
+
+#dettagliPost {
+  margin-top: 20px;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dettagli Post</title>
+</head>
+
+<body>
+  <a href="index.html">home</a>
+  <h2>Dettagli del Post</h2>
+
+  <script>
+    // Recupera il parametro dell'URL
+    const params = new URLSearchParams(window.location.search);
+    const postId = params.get('id');
+
+    // Verifica se c'è un ID del post nell'URL
+    if (postId) {
+      // Se c'è, effettua la chiamata API per ottenere i dettagli del post
+      const apiUrl = `https://jsonplaceholder.typicode.com/posts/${postId}`;
+
+      fetch(apiUrl)
+        .then(response => response.json())
+        .then(post => {
+          // Visualizza i dettagli del post
+          document.body.innerHTML += `
+                        <h3>${post.title}</h3>
+                        <p>${post.body}</p>
+                        <p>ID: ${post.id}</p>
+                    `;
+        })
+        .catch(error => {
+          console.error('Si è verificato un errore durante il recupero dei dettagli del post:', error);
+        });
+    } else {
+      // Se non c'è un ID del post nell'URL, mostra un messaggio di errore o gestisci come preferisci
+      document.body.innerHTML = '<p>Errore: ID del post non specificato.</p>';
+    }
+  </script>
+
+</body>
+
+</html>
