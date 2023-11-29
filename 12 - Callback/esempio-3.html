@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback in JavaScript</title>
+</head>
+
+<body>
+
+    <script>
+        // Funzione che applica una trasformazione a ciascun elemento di una lista
+        function trasformaLista(lista, trasformazioneCallback) {
+            console.log("Inizio della trasformazione della lista...");
+
+            // Creiamo una nuova lista trasformata applicando la callback a ciascun elemento
+            var listaTrasformata = lista.map(trasformazioneCallback);
+
+            console.log("Fine della trasformazione della lista.");
+            return listaTrasformata;
+        }
+
+        // Callback che raddoppia un numero
+        function raddoppia(numero) {
+            return numero * 2;
+        }
+
+        // Callback che aggiunge 10 a un numero
+        function aggiungi10(numero) {
+            return numero + 10;
+        }
+
+        // Lista di numeri
+        var numeri = [1, 2, 3, 4, 5];
+
+        // Applichiamo la trasformazione raddoppia alla lista di numeri
+        var risultatoRaddoppia = trasformaLista(numeri, raddoppia);
+        console.log("Risultato della trasformazione raddoppia:", risultatoRaddoppia);
+
+        // Applichiamo la trasformazione aggiungi10 alla lista di numeri
+        var risultatoAggiungi10 = trasformaLista(numeri, aggiungi10);
+        console.log("Risultato della trasformazione aggiungi10:", risultatoAggiungi10);
+
+    </script>
+
+</body>
+
+</html>

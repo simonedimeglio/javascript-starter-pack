@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback in JavaScript</title>
+</head>
+
+<body>
+    <h1>Spiegazione passo dopo passo:</h1>
+    <hr>
+    <!-- Funzione fetchData -->
+    <h2>Funzione fetchData:</h2>
+
+    <b>Cosa fa:</b> Questa funzione rappresenta il recupero di dati da un luogo remoto, come un server.
+    <br>
+    <b>Come lo fa:</b> Stampa un messaggio che dice "Recupero dei dati in corso...", poi aspetta per 2 secondi
+    (simulando il tempo necessario per ottenere i dati), e infine chiama un'altra funzione (la callback) passando un
+    oggetto di dati.
+    <hr>
+    <!-- Funzione setTimeout -->
+    <h2>Funzione setTimeout:</h2>
+
+    <b>Cosa fa:</b> Simula un ritardo di 2 secondi.
+    <br>
+    <b>Come lo fa:</b> Dopo aver atteso per 2 secondi, esegue una funzione che crea un oggetto data e chiama la callback
+    passando questo oggetto come argomento.
+    <hr>
+    <!-- Oggetto data -->
+    <h2>Oggetto data:</h2>
+
+    <b>Cosa è:</b> Un oggetto che rappresenta i dati recuperati.
+    <br>
+    <b>Contenuto:</b> Contiene una proprietà chiamata message con il valore "Dati recuperati con successo!".
+    <hr>
+    <!-- Funzione processData -->
+    <h2>Funzione processData:</h2>
+
+    <b>Cosa fa:</b> Questa funzione rappresenta l'elaborazione dei dati recuperati.
+    <br>
+    <b>Come lo fa:</b> Stampa un messaggio che dice "Elaborazione dei dati:" seguito dal messaggio dei dati recuperati.
+    <hr>
+    <!-- Chiamata di fetchData -->
+    <h2>Chiamata di fetchData con la callback processData:</h2>
+
+    <b>Cosa fa:</b> Chiamiamo la funzione fetchData passando la funzione processData come argomento (callback).
+    <br>
+    <b>Come lo fa:</b> fetchData inizia a recuperare i dati, attende 2 secondi (simulando il recupero), e poi chiama la
+    funzione processData con i dati appena recuperati.
+
+    <br>
+    <br>
+    <hr>
+    <p>Quindi, l'intero processo è come dire: "Immagina che stiamo cercando di ottenere dati da qualche parte. Mentre
+        aspettiamo, facciamo altre cose. Quando finalmente otteniamo i dati, facciamo qualcos'altro con essi, come
+        stampare un messaggio." La bellezza delle callback è che possiamo decidere cosa fare con i dati una volta che
+        sono disponibili, senza dover aspettare che l'operazione di recupero sia completa.
+    </p>
+
+    <script>
+        // fetchData è una funzione che simula il recupero di dati asincroni dal server. 
+
+        function fetchData(callback) { // La funzione accetta una callback come parametro.
+            console.log("Recupero dei dati in corso...");
+            setTimeout(function () { // Simuliamo un ritardo di 2 secondi
+                var data = { message: "Dati recuperati con successo!" };
+                console.log("Dati recuperati.");
+                callback(data); // PARAMETRO che ho passato a riga 13
+            }, 2000);
+        }
+
+        // CALLBACK
+        // La callback è rappresentata dalla funzione processData, 
+        // che verrà chiamata quando il recupero dei dati è completato.
+        function processData(data) {
+            console.log("Elaborazione dei dati:", data.message);
+        }
+
+        // Utilizziamo la funzione fetchData passando la callback processData
+        fetchData(processData);
+    </script>
+
+</body>
+
+</html>

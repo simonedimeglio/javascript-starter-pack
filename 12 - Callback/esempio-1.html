@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback in JavaScript</title>
+</head>
+<body>
+
+<button id="myButton">Clicca qui</button>
+
+<script>
+// DEFINIZIONE DELLA NOSTRA CALLBACK
+function visualizzaMessaggio() {
+    console.log("Il pulsante è stato cliccato!");
+}
+// visualizzaMessaggio è la nostra callback 
+// che verrà eseguita quando il pulsante viene cliccato.
+
+
+
+// Selezioniamo il pulsante dal DOM
+var pulsante = document.getElementById("myButton");
+
+// Aggiungiamo un listener per l'evento di click al pulsante
+pulsante.addEventListener("click", visualizzaMessaggio);
+
+// addEventListener è una funzione che ascolta 
+// un certo tipo di evento su un elemento HTML e, 
+// quando quell'evento si verifica, 
+// esegue una callback specificata.
+</script>
+
+</body>
+</html>
