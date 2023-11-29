@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sintassi</title>
+</head>
+
+<body>
+  <script>
+    const miaPromise = new Promise((resolve, reject) => {
+      // Logica dell'operazione asincrona
+
+      if (/* l'operazione ha successo */) {
+        resolve("Risultato dell'operazione con successo");
+      } else {
+        reject("Errore durante l'operazione");
+      }
+    });
+
+    miaPromise
+      .then((risultato) => {
+        // Logica da eseguire quando l'operazione ha successo
+        console.log(risultato);
+      })
+      .catch((errore) => {
+        // Logica da eseguire quando l'operazione fallisce
+        console.error(errore);
+      });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promise</title>
+</head>
+
+<body>
+  Promise con il gelato!
+  <script>
+
+    // Funzione che simula l'andare a prendere il gelato (operazione asincrona)
+
+    // La funzione andareAPrendereGelato restituisce una Promise. 
+    function andareAPrendereGelato() {
+      return new Promise((resolve, reject) => {
+        // Immaginiamo che il processo di andare a prendere il gelato richieda del tempo (2 secondi simulati)
+        // e che possa generare un risultato positivo o uno negativo
+        setTimeout(() => {
+          const haiPresoIlGelato = Math.random() > 0.5; // Generiamo casualmente un risultato positivo o negativo
+
+          if (haiPresoIlGelato) {
+            resolve("Hai preso il gelato! 🍦");
+          } else {
+            reject("Spiacente, non hai preso il gelato. 😢");
+          }
+        }, 2000);
+      });
+    }
+
+    // Utilizziamo la Promise per gestire l'operazione 
+    // Al di fuori della Promise, utilizziamo i metodi 
+    // then e catch per gestire rispettivamente 
+    // il successo e il fallimento dell'operazione 
+
+    andareAPrendereGelato()
+      .then((risultato) => {
+        console.log(risultato);
+      })
+      .catch((errore) => {
+        console.error(errore);
+      });
+  </script>
+</body>
+
+</html>

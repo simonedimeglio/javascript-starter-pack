@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promise</title>
+</head>
+
+<body>
+  <script>
+    // Funzione che simula una chiamata API (operazione asincrona)
+    function chiamataAPI() {
+      return new Promise((resolve, reject) => {
+        // Simuliamo una chiamata API dopo 2 secondi
+        setTimeout(() => {
+          const dati = { messaggio: "Dati dalla chiamata API" };
+          const errore = null; // Simuliamo l'assenza di errori
+
+          // Se l'operazione ha successo, chiamiamo resolve con i dati
+          // Altrimenti, chiamiamo reject con l'errore
+          if (errore === null) {
+            resolve(dati);
+          } else {
+            reject("Errore durante la chiamata API");
+          }
+        }, 2000);
+      });
+    }
+
+    // Utilizziamo la Promise per gestire l'operazione
+    chiamataAPI()
+      .then((risultato) => {
+        console.log("Successo:", risultato);
+      })
+      .catch((errore) => {
+        console.error("Errore:", errore);
+      });
+  </script>
+</body>
+
+</html>
