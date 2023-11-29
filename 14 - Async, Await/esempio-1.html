@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript Asincrono</title>
+</head>
+
+<body>
+
+  <h6>Esempio in cui utilizziamo async/await per gestire il recupero di dati da più fonti asincrone:</h6>
+
+  <script>
+    // Funzione asincrona che simula il recupero di dati da una fonte A
+    async function recuperaDatiDaFonteA() {
+      await new Promise(resolve => setTimeout(resolve, 5000));
+      return { datiA: "Dati dalla Fonte A" };
+    }
+
+    // Funzione asincrona che simula il recupero di dati da una fonte B
+    async function recuperaDatiDaFonteB() {
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      return { datiB: "Dati dalla Fonte B" };
+    }
+
+    // Funzione principale che utilizza async/await per coordinare le due chiamate asincrone
+    async function recuperaDatiDaFonti() {
+      try {
+        console.log("Inizio recupero dati...");
+
+        // Utilizziamo await per attendere il completamento delle due funzioni asincrone
+        const datiFonteA = await recuperaDatiDaFonteA();
+        const datiFonteB = await recuperaDatiDaFonteB();
+
+        console.log("Dati ricevuti dalla Fonte A:", datiFonteA);
+        console.log("Dati ricevuti dalla Fonte B:", datiFonteB);
+      } catch (errore) {
+        console.error("Errore durante il recupero dei dati:", errore);
+      }
+    }
+
+    // Chiamiamo la funzione principale (ci metterà 7 secondi a stampare!)
+    recuperaDatiDaFonti();
+
+  </script>
+</body>
+
+</html>

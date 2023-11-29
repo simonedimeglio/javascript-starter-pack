@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript Asincrono</title>
+</head>
+
+<body>
+  <script>
+    // Funzione asincrona che ritorna una Promise risolta dopo un certo tempo
+    function esempioOperazioneAsincrona() {
+      return new Promise(resolve => {
+        setTimeout(() => {
+          resolve("Operazione completata!");
+        }, 2000); // Simula un'operazione che richiede 2 secondi
+      });
+    }
+
+    // Funzione principale dichiarata con async/await
+    async function esempioAsyncAwait() {
+      console.log("Inizio dell'operazione asincrona");
+
+      // Utilizzo di await per aspettare che l'operazione asincrona sia completata
+      const risultato = await esempioOperazioneAsincrona();
+
+      // Questo codice verrà eseguito solo dopo il completamento dell'operazione asincrona
+      console.log(risultato);
+    }
+
+    // Chiamata della funzione principale
+    esempioAsyncAwait();
+
+  </script>
+</body>
+
+</html>
