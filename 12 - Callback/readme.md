@@ -9,7 +9,7 @@ Le callback sono utili in situazioni in cui alcune operazioni richiedono del tem
   
 Le callback sono ampiamente utilizzate nel mondo dello sviluppo software e sono una parte fondamentale di molte librerie e framework JavaScript. Alcuni dei contesti in cui le callback sono comunemente utilizzate includono:
 
-1.  **Eventi del Browser:** Le callback sono spesso utilizzate per gestire eventi del browser, come clic del mouse, pressioni di tasti e caricamenti di pagine. Ad esempio, nell'esempio pratico che ti ho mostrato, la callback viene eseguita quando il pulsante viene cliccato.
+1.  **Eventi del Browser:** Le callback sono spesso utilizzate per gestire eventi del browser, come clic del mouse, pressioni di tasti e caricamenti di pagine.
     
 2.  **Chiamate Asincrone:** Le callback sono essenziali quando si gestiscono operazioni asincrone, come le richieste AJAX o le operazioni di lettura/scrittura di file. In questo contesto, una funzione di callback può essere chiamata una volta che l'operazione asincrona è stata completata.
     
