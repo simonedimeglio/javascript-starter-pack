@@ -11,18 +11,18 @@
   Promise con il gelato!
   <script>
 
-    // Funzione che simula l'andare a prendere il gelato (operazione asincrona)
+    // Funzione che simula l'andare a prendere il gelato (operazione asincrona, immaginiamo che sia una operazione che richieda tempo!)
 
     // La funzione andareAPrendereGelato restituisce una Promise. 
     function andareAPrendereGelato() {
       return new Promise((resolve, reject) => {
         // Immaginiamo che il processo di andare a prendere il gelato richieda del tempo (2 secondi simulati)
-        // e che possa generare un risultato positivo o uno negativo
+        // e che possa generare un risultato positivo o uno negativo ( Magari il gelataio è chiuso ;D )
         setTimeout(() => {
           const haiPresoIlGelato = Math.random() > 0.5; // Generiamo casualmente un risultato positivo o negativo
 
           if (haiPresoIlGelato) {
-            resolve("Hai preso il gelato! 🍦");
+            resolve("Hai preso il gelato! 🍦"); // Belle le emoticon, vero? 
           } else {
             reject("Spiacente, non hai preso il gelato. 😢");
           }
