@@ -27,17 +27,17 @@ Questa sintassi rende il codice più leggibile e più simile a quello sincrono, 
 
 ### Come Funziona `async`/`await`?
 
- **Dichiarazione di una Funzione Asincrona:**
+ **1) Dichiarazione di una Funzione Asincrona:**
     
 Utilizzando la parola chiave `async`, dichiari una funzione asincrona che restituirà sempre una Promise.
 
-**Utilizzo di `await` per Gestire Promise:**
+**2) Utilizzo di `await` per Gestire Promise:**
 
 All'interno della funzione asincrona, puoi utilizzare la parola chiave `await` per attendere il completamento di una Promise.
 
-**Gestione degli Errori:**
+**3) Gestione degli Errori:**
 
-Puoi gestire gli errori con un blocco `try`/`catch` come faresti con le Promise tradizionali.
+Puoi gestire gli errori con un blocco `try`/`catch` come faresti con le Promise tradizionali. (PS: Cartella 15 di questa Repository)
 
 ### A Cosa Serve `async`/`await`?
 
@@ -49,7 +49,7 @@ Puoi gestire gli errori con un blocco `try`/`catch` come faresti con le Promise 
     -   La gestione degli errori diventa più simile a quella di un blocco `try`/`catch`, rendendo più intuitivo gestire eventuali problemi durante l'esecuzione asincrona.
 -   **Sequenzialità:**
     
-    -   Permette di scrivere il codice asincrono in modo più sequenziale, evitando il callback hell e semplificando la struttura del codice.
+    -   Permette di scrivere il codice asincrono in modo più sequenziale, evitando il "callback hell" e semplificando la struttura del codice.
 -   **Compatibilità con le Promise:**
     
     -   `async`/`await` è compatibile con le Promise esistenti, rendendo più agevole la transizione e l'integrazione in codice già esistente.
