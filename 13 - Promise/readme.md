@@ -15,7 +15,7 @@ Le Promise sono utilizzate per gestire il flusso di controllo nei casi in cui le
     -   Una Promise ha due metodi principali: `then` (gestisce il successo) e `catch` (gestisce il fallimento). Questi metodi accettano funzioni di callback da eseguire quando la Promise è risolta o respinta.
 3.  **Async/Await:**
     
-    -   Le Promise possono essere utilizzate con le parole chiave `async` e `await` per semplificare la gestione del flusso asincrono e rendere il codice più leggibile.
+    -   Le Promise possono essere utilizzate con le parole chiave `async` e `await` per semplificare la gestione del flusso asincrono e rendere il codice più leggibile. (PS: Cartella 14 di questa repository!)
 
 
 ### Tutte le funzioni restituiscono una Promise? 
